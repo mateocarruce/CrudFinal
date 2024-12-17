@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Clientes y Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gestión de Clientes y Productos</h1>
+
+    <!-- CRUD de Clientes -->
+    <section>
+        <h2>Clientes</h2>
+        <form id="clienteForm">
+            <label>Nombre: <input type="text" id="clienteNombre" required></label>
+            <label>Email: <input type="email" id="clienteEmail" required></label>
+            <button type="submit">Agregar Cliente</button>
+        </form>
+        <button onclick="cargarClientes()">Cargar Clientes</button>
+        <div id="clientesLista"></div>
+    </section>
+
+    <!-- CRUD de Productos -->
+    <section>
+        <h2>Productos</h2>
+        <form id="productoForm">
+            <label>Nombre: <input type="text" id="productoNombre" required></label>
+            <label>Precio: <input type="number" id="productoPrecio" required></label>
+            <label>Stock: <input type="number" id="productoStock" required></label>
+            <button type="submit">Agregar Producto</button>
+        </form>
+        <button onclick="cargarProductos()">Cargar Productos</button>
+        <div id="productosLista"></div>
+    </section>
+
+    <!-- Enviar Correo -->
+    <section>
+        <h2>Enviar Correo Electrónico</h2>
+        <form id="emailForm">
+            <label>Destinatario: <input type="email" id="correoPara" required></label>
+            <label>Asunto: <input type="text" id="correoAsunto" required></label>
+            <label>Mensaje: <textarea id="correoMensaje" required></textarea></label>
+            <button type="submit">Enviar Correo</button>
+        </form>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
